@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+package.json
+package-lock.json
+
+# Environment
+.env
+
+# Scripts
+extract_frames.js
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaka Properties | Nigeria's Premium Real Estate company since 2007</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-shaka">SHAKA</span>
+                <span class="logo-props">PROPERTIES</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#agents">Agents</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-gold shimmer">Register</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg" id="hero-frame-container">
+            <!-- Frames will be injected here by JS -->
+            <div class="hero-gradient"></div>
+            <!-- Bokeh particles -->
+            <div class="particles">
+                <div class="particle p1"></div>
+                <div class="particle p2"></div>
+                <div class="particle p3"></div>
+                <div class="particle p4"></div>
+                <div class="particle p5"></div>
+            </div>
+        </div>
+
+        <div class="hero-content reveal">
+            <h1 class="headline">Find Where Luxury <i>Meets</i> Home</h1>
+            <p class="subheadline">Nigeria's Premium Real Estate Company Since 2007</p>
+
+            <div class="search-bar glass">
+                <div class="search-field">
+                    <label>Property Type</label>
+                    <select>
+                        <option>All Types</option>
+                        <option>Villa</option>
+                        <option>Penthouse</option>
+                        <option>Estate</option>
+                    </select>
+                </div>
+                <div class="divider"></div>
+                <div class="search-field">
+                    <label>Location</label>
+                    <select>
+                        <option>Lagos</option>
+                        <option>Abuja (FCT)</option>
+                        <option>Rivers (Port Harcourt)</option>
+                        <option>Oyo (Ibadan)</option>
+                    </select>
+                </div>
+                <div class="divider"></div>
+                <div class="search-field">
+                    <label>Price Range</label>
+                    <select>
+                        <option>Any Price</option>
+                        <option>₦50M - ₦100M</option>
+                        <option>₦100M - ₦500M</option>
+                        <option>₦500M+</option>
+                    </select>
+                </div>
+                <button class="btn btn-gold btn-search glow">
+                    <i class="ph ph-magnifying-glass"></i> Search Properties
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Listings Section -->
+    <section id="properties" class="listings-section py-20">
+        <div class="container reveal">
+            <h2 class="section-title">Explore Premium Properties</h2>
+            <div class="title-underline"></div>
+
+            <div class="filter-tabs">
+                <button class="tab active">All</button>
+                <button class="tab">For Sale</button>
+                <button class="tab">For Rent</button>
+                <button class="tab">Houses</button>
+                <button class="tab">Apartments</button>
+                <button class="tab">Commercial</button>
+                <button class="tab">Land</button>
+            </div>
+
+            <div class="masonry-grid">
+                <!-- Card 1 -->
+                <div class="property-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1470&auto=format&fit=crop"
+                            alt="Ikoyi Waterfront Villa">
+                        <div class="price-badge">₦850,000,000</div>
+                        <div class="tag-ribbon tag-sale">For Sale</div>
+                        <div class="hover-overlay">
+                            <button class="btn btn-gold btn-view">View Property</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h3>Ikoyi Waterfront Villa</h3>
+                        <p class="location"><i class="ph ph-map-pin"></i> Old Ikoyi, Lagos</p>
+                        <div class="stats-row">
+                            <span><i class="ph ph-bed"></i> 6 Beds</span>
+                            <span><i class="ph ph-bathtub"></i> 7 Baths</span>
+                            <span><i class="ph ph-squares-four"></i> 1,200 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="property-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1470&auto=format&fit=crop"
+                            alt="Victoria Island Penthouse">
+                        <div class="price-badge">₦450,000 / month</div>
+                        <div class="tag-ribbon tag-rent">For Rent</div>
+                        <div class="hover-overlay">
+                            <button class="btn btn-gold btn-view">View Property</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h3>Skyline Penthouse</h3>
+                        <p class="location"><i class="ph ph-map-pin"></i> Victoria Island, Lagos</p>
+                        <div class="stats-row">
+                            <span><i class="ph ph-bed"></i> 4 Beds</span>
+                            <span><i class="ph ph-bathtub"></i> 4.5 Baths</span>
+                            <span><i class="ph ph-squares-four"></i> 850 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="property-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1475&auto=format&fit=crop"
+                            alt="Lekki Modern Estate">
+                        <div class="price-badge">₦320,000,000</div>
+                        <div class="tag-ribbon tag-sale">For Sale</div>
+                        <div class="hover-overlay">
+                            <button class="btn btn-gold btn-view">View Property</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h3>Pinnacle Modern Estate</h3>
+                        <p class="location"><i class="ph ph-map-pin"></i> Lekki Phase 1, Lagos</p>
+                        <div class="stats-row">
+                            <span><i class="ph ph-bed"></i> 5 Beds</span>
+                            <span><i class="ph ph-bathtub"></i> 6 Baths</span>
+                            <span><i class="ph ph-squares-four"></i> 950 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="property-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=1470&auto=format&fit=crop"
+                            alt="Asokoro Mansion">
+                        <div class="price-badge">₦1,200,000,000</div>
+                        <div class="tag-ribbon tag-sale">For Sale</div>
+                        <div class="hover-overlay">
+                            <button class="btn btn-gold btn-view">View Property</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h3>Diplomat's Haven</h3>
+                        <p class="location"><i class="ph ph-map-pin"></i> Asokoro, Abuja</p>
+                        <div class="stats-row">
+                            <span><i class="ph ph-bed"></i> 8 Beds</span>
+                            <span><i class="ph ph-bathtub"></i> 10 Baths</span>
+                            <span><i class="ph ph-squares-four"></i> 2,500 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="property-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1470&auto=format&fit=crop"
+                            alt="Maitama Luxury Apartment">
+                        <div class="price-badge">₦1,500,000 / month</div>
+                        <div class="tag-ribbon tag-rent">For Rent</div>
+                        <div class="hover-overlay">
+                            <button class="btn btn-gold btn-view">View Property</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h3>Azure Heights Apartment</h3>
+                        <p class="location"><i class="ph ph-map-pin"></i> Maitama, Abuja</p>
+                        <div class="stats-row">
+                            <span><i class="ph ph-bed"></i> 3 Beds</span>
+                            <span><i class="ph ph-bathtub"></i> 3 Baths</span>
+                            <span><i class="ph ph-squares-four"></i> 600 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="property-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop"
+                            alt="Banana Island Masterpiece">
+                        <div class="price-badge">₦2,500,000,000</div>
+                        <div class="tag-ribbon tag-sale">For Sale</div>
+                        <div class="hover-overlay">
+                            <button class="btn btn-gold btn-view">View Property</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h3>The Crown Jewel</h3>
+                        <p class="location"><i class="ph ph-map-pin"></i> Banana Island, Lagos</p>
+                        <div class="stats-row">
+                            <span><i class="ph ph-bed"></i> 7 Beds</span>
+                            <span><i class="ph ph-bathtub"></i> 8 Baths</span>
+                            <span><i class="ph ph-squares-four"></i> 3,100 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="view-all-container">
+                <button class="btn btn-outline glow">Load More Properties</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us - Stats Band -->
+    <section class="stats-band py-20 reveal">
+        <div class="container container-restricted">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number countup" data-target="18">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number countup" data-target="5000">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Properties Sold</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number countup" data-target="120">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Expert Agents</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number countup" data-target="98">0</div>
+                    <div class="stat-plus">%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Blocks Row -->
+    <section class="features-section py-20 reveal">
+        <div class="container">
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="ph ph-house"></i></div>
+                    <h3>List Your Property</h3>
+                    <p>Reach thousands of qualified buyers through our premium network and exclusive channels.</p>
+                    <a href="#" class="feature-link">Learn More <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="ph ph-trend-up"></i></div>
+                    <h3>Maximize Your ROI</h3>
+                    <p>Expert marketing strategies and valuation techniques to secure the best possible price.</p>
+                    <a href="#" class="feature-link">Learn More <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="ph ph-star"></i></div>
+                    <h3>The Shaka Difference</h3>
+                    <p>18 years of excellence, personalized service, and thousands of satisfied clients.</p>
+                    <a href="#" class="feature-link">Learn More <i class="ph ph-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agents Section -->
+    <section id="agents" class="agents-section py-20 reveal">
+        <div class="container container-restricted">
+            <div class="section-header-row">
+                <div>
+                    <h2 class="section-title">Meet Our Expert Agents</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn"><i class="ph ph-caret-left"></i></button>
+                    <button class="carousel-btn"><i class="ph ph-caret-right"></i></button>
+                </div>
+            </div>
+
+            <div class="agents-carousel">
+                <div class="agent-card">
+                    <div class="agent-avatar">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1287&auto=format&fit=crop"
+                            alt="Tunde Alabi">
+                    </div>
+                    <h4>Tunde Alabi</h4>
+                    <span class="agent-tag">Luxury Residential</span>
+                    <button class="btn btn-outline-gold btn-sm">Contact Agent</button>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-avatar">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1288&auto=format&fit=crop"
+                            alt="Aisha Bello">
+                    </div>
+                    <h4>Aisha Bello</h4>
+                    <span class="agent-tag">Commercial Estates</span>
+                    <button class="btn btn-outline-gold btn-sm">Contact Agent</button>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-avatar">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1287&auto=format&fit=crop"
+                            alt="Chinedu Okeke">
+                    </div>
+                    <h4>Chinedu Okeke</h4>
+                    <span class="agent-tag">Waterfront Properties</span>
+                    <button class="btn btn-outline-gold btn-sm">Contact Agent</button>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-avatar">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1361&auto=format&fit=crop"
+                            alt="Folake Adeyemi">
+                    </div>
+                    <h4>Folake Adeyemi</h4>
+                    <span class="agent-tag">Property Management</span>
+                    <button class="btn btn-outline-gold btn-sm">Contact Agent</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <span class="logo-shaka">SHAKA</span>
+                        <span class="logo-props">PROPERTIES</span>
+                    </div>
+                    <p class="brand-blurb">Elevating the standard of living since 2007. We bring you the most exclusive
+                        and premium real estate opportunities across Nigeria.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#agents">Agents</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="ph ph-map-pin"></i> 15 Luxury Ave, Ibeju-Lekki, Lagos</li>
+                        <li><i class="ph ph-phone"></i> +234 800 123 4567</li>
+                        <li><i class="ph ph-envelope"></i> inquiries@shakaproperties.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p>Subscribe to get updates on our latest luxury listings.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-gold">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shaka Properties Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating AI Voice Assistant Button -->
+    <div class="ai-assistant-container">
+        <div class="ai-status-tooltip">Ask Shaka AI...</div>
+        <button id="ai-mic-btn" class="ai-mic-btn">
+            <i class="ph ph-microphone"></i>
+            <div class="ai-ripple"></div>
+        </button>
+    </div>
+
+    <!-- API Key Setup Modal -->
+    <div id="api-key-modal" class="api-modal-overlay">
+        <div class="api-modal glass">
+            <h3><i class="ph ph-sparkle"></i> Activate Shaka AI</h3>
+            <p>Please enter your Google Gemini API Key. This will be securely saved locally in your browser.</p>
+            <input type="password" id="gemini-api-key-input" placeholder="AIzaSy...">
+            <div class="api-modal-buttons">
+                <button id="api-modal-cancel" class="btn btn-outline">Cancel</button>
+                <button id="api-modal-save" class="btn btn-gold">Save Key & Connect</button>
+            </div>
+            <p class="api-modal-footer">Get your key from <a href="https://aistudio.google.com/app/apikey"
+                    target="_blank">Google AI Studio</a>.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById("hero-frame-container");
+            const totalFrames = 225;
+            let currentFrame = 1;
+
+            // Preload and create img elements
+            const frames = [];
+            for (let i = 1; i <= totalFrames; i++) {
+                const img = new Image();
+                const paddedNum = i.toString().padStart(4, '0');
+                img.src = `assets/ekonight_frame_${paddedNum}.jpg`;
+                img.className = 'hero-frame';
+                if (i === 1) img.classList.add('active');
+
+                // Add a wrapper to each frame for smooth crossfading
+                const wrapper = document.createElement('div');
+                wrapper.className = 'frame-wrapper';
+                if (i === 1) wrapper.classList.add('active');
+                wrapper.appendChild(img);
+
+                container.insertBefore(wrapper, container.querySelector('.hero-gradient'));
+                frames.push(wrapper);
+            }
+
+            // Animate frames (15fps = ~66ms per frame)
+            setInterval(() => {
+                frames[currentFrame - 1].classList.remove('active');
+
+                currentFrame++;
+                if (currentFrame > totalFrames) {
+                    currentFrame = 1; // Loop back
+                }
+
+                frames[currentFrame - 1].classList.add('active');
+            }, 66);
+        });
+    </script>
+</body>
+
+</html>
