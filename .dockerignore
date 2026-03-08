@@ -1,9 +1,8 @@
-# Ignore Node modules and temp files since we only need the vanilla HTML/CSS/JS and assets
 node_modules/
-package.json
-package-lock.json
-extract_frames.js
 .git/
 .gitignore
 .dockerignore
-Dockerfile
+.gcloudignore
+extract_frames.js
+.env
+dist/
