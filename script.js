@@ -169,13 +169,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Send initial config with persona
                 const setupMessage = {
                     setup: {
-                        model: "models/gemini-2.5-flash",
+                        model: "models/gemini-2.0-flash",
                         systemInstruction: {
                             parts: [{
                                 text: "You are 'SquaredTech AI', a highly professional, polite, and sophisticated luxury real estate concierge for SquaredTech Properties Ltd in Nigeria. You must speak like a young Nigerian woman with a slight accent. Keep answers conversational, helpful, and very brief (1-2 sentences). Do not use markdown."
                             }]
                         },
                         generationConfig: {
+                            responseModalities: ["AUDIO"],
                             speechConfig: {
                                 voiceConfig: {
                                     prebuiltVoiceConfig: {
