@@ -237,13 +237,28 @@ document.addEventListener('DOMContentLoaded', () => {
         audioContext = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 });
         const source = audioContext.createMediaStreamSource(mediaStream);
 
-        processor = audioContext.createScriptProcessor(4096, 1, 1);
+        try {
+            await audioContext.audioWorklet.addModule('/audio-processor.js');
+            processor = new AudioWorkletNode(audioContext, 'audio-capture-processor');
+        } catch (e) {
+            console.warn("AudioWorklet not supported or failed to load, falling back to ScriptProcessorNode", e);
+            processor = audioContext.createScriptProcessor(4096, 1, 1);
+            processor.onaudioprocess = (e) => {
+                if (!isListening || !ws || ws.readyState !== WebSocket.OPEN) return;
+                const inputData = e.inputBuffer.getChannelData(0);
+                const pcm16 = float32ToPcm16(inputData);
+                const base64Data = arrayBufferToBase64(pcm16.buffer);
+                ws.send(JSON.stringify({ realtimeInput: { mediaChunks: [{ mimeType: "audio/pcm;rate=16000", data: base64Data }] } }));
+            };
+            source.connect(processor);
+            processor.connect(audioContext.destination);
+            return;
+        }
 
-        processor.onaudioprocess = (e) => {
+        processor.port.onmessage = (e) => {
             if (!isListening || !ws || ws.readyState !== WebSocket.OPEN) return;
 
-            const inputData = e.inputBuffer.getChannelData(0);
-            const pcm16 = float32ToPcm16(inputData);
+            const pcm16 = e.data;
             const base64Data = arrayBufferToBase64(pcm16.buffer);
 
             ws.send(JSON.stringify({
@@ -257,7 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         source.connect(processor);
-        processor.connect(audioContext.destination);
     }
 
     function stopLiveSession() {
