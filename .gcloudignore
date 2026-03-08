@@ -1,7 +1,5 @@
-# Exclude Node Modules and environment variables
+# Exclude Node Modules
 node_modules/
-.env
-
 # Allow package.json to be uploaded!
 !package.json
 !package-lock.json

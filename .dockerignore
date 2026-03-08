@@ -4,5 +4,4 @@ node_modules/
 .dockerignore
 .gcloudignore
 extract_frames.js
-.env
 dist/
