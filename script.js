@@ -145,8 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let recognition = null;
     let finalTranscript = '';
 
-    // Check for existing API key
-    let geminiApiKey = localStorage.getItem('shaka_gemini_key');
+    // PLACE YOUR FREE GOOGLE AI STUDIO API KEY HERE
+    let geminiApiKey = import.meta.env.VITE_GEMINI_API_KEY || localStorage.getItem('shaka_gemini_key') || "YOUR_API_KEY_HERE";
 
     // Initialize Speech Recognition
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {

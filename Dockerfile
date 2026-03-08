@@ -1,13 +1,21 @@
-# Use the official lightweight Nginx Alpine image
+# == Build Stage ==
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+RUN npm install
+
+# Copy source code and build
+COPY . .
+RUN npm run build
+
+# == Serve Stage ==
 FROM nginx:alpine
 
-# Copy the static website files into the default Nginx document root
-COPY index.html /usr/share/nginx/html/index.html
-COPY style.css /usr/share/nginx/html/style.css
-COPY script.js /usr/share/nginx/html/script.js
-
-# Copy the assets folder (images, video frames, etc.)
-COPY assets/ /usr/share/nginx/html/assets/
+# Copy built files from the previous stage
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Expose port 8080 (Cloud Run default)
 EXPOSE 8080
